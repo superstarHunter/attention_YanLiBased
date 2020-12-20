@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "train_model.py", line 834, in <module>
+    main()
+  File "train_model.py", line 806, in main
+    train_model_from_file(config_file, output_dir, recover=args.continue_on_same_config_file)
+  File "/opt/anaconda3/envs/dnn/lib/python3.7/site-packages/allennlp/commands/train.py", line 142, in train_model_from_file
+    return train_model(params, serialization_dir, file_friendly_logging, recover, force)
+  File "/opt/anaconda3/envs/dnn/lib/python3.7/site-packages/allennlp/commands/train.py", line 278, in train_model
+    check_for_gpu(params.get('trainer').get('cuda_device', -1))
+  File "/opt/anaconda3/envs/dnn/lib/python3.7/site-packages/allennlp/common/checks.py", line 43, in check_for_gpu
+    raise ConfigurationError("Experiment specified a GPU but none is available;"
+allennlp.common.checks.ConfigurationError: "Experiment specified a GPU but none is available; if you want to run on CPU use the override 'trainer.cuda_device=-1' in the json config file."
